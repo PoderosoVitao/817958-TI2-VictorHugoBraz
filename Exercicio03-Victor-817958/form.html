@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta content="text/html; charset = UTF-8" http-equiv="content-type">
+
+<title>CRUD do Vitão</title>
+</head>
+
+<script type="text/javascript">
+
+function confirmarDeleteProduto(id, descricao, preco) {  
+	
+    if (confirm('Confirmar a exclusão do produto [' + descricao + '] (ID ' + id + ') com preço R$ ' + preco)) {  
+        location.href = '/produto/delete/' + id;
+    }
+}
+function onLoad() {
+    if(document.getElementById("msg").value != ""){
+      alert(document.getElementById("msg").value);
+    }
+}
+</script>
+<header>
+	<div class="coolDiv">
+    <img src="/image/Skull.gif" class="skull-image">
+    <h3 id="blink-text">CRUD DO VITÃO!</h3>
+    <img class="overlay1" src="/image/REALLY-COOL-FLAMES.gif">
+    <img src="/image/Skull.gif" class="skull-image">
+</div>
+
+</header>
+
+<body onload="onLoad()">
+	<h1>Controle de Estoque</h1>
+	<input type="hidden" id="msg" name="msg" value="">
+    <UM-PRODUTO>
+	<br>
+	<LISTAR-PRODUTO>
+
+
+<div class="lazyFooter">
+	<div>
+	<img src="/image/Skeleton2.gif"  class="lastImg">
+	</div>
+</div>
+<style>
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-color: lightslategray;
+	margin: 0;
+}
+
+header{
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 0%;
+	border: 0%;
+	padding: 0;
+}
+
+.coolDiv {
+    position: relative; 
+    text-align: center;
+}
+
+.lazyfooter{
+	background-color: black;
+	margin-top: 150px;
+}
+
+.lazyfooter img{
+	position:relative;
+	margin-left: 45%;
+	margin-right: 50%;
+}
+
+.skull-image {
+    width: 150px; 
+    height: auto; 
+}
+
+.overlay1 {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    width: 50%;
+}
+
+#blink-text {
+    position: relative; 
+    z-index: 2;
+    display: inline-block;
+    padding: 10px 20px; 
+    font-size: 40px;
+    bottom: 25px;
+}
+
+.input--main__style {
+	background-color: #00FF00;
+}
+
+.input--button {
+	font-weight: bold;
+	font-family: Arial;
+	font-size: medium;
+	border-color: transparent;
+	display: block;
+	margin: 0px auto;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.input--register {
+	display: inline;
+}
+
+input {
+	display: block;
+	border-radius: 7px;
+	padding: 10px;
+	border-style: solid;
+	border-color: lightgray;
+	color: black;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+form p {
+	text-align: initial;
+	display: inline;
+	margin-left: 15px;
+}
+
+.p--nomargin {
+	margin-left: 0px;
+	margin-right: 10px;
+}
+
+@keyframes blink {
+    0% {
+        color: black;
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: black;
+    }
+}
+
+#blink-text {
+    animation: blink 0.1s infinite;
+}
+</style>
+</body>
+</html>
